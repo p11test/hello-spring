@@ -1,0 +1,25 @@
+server:
+  port: 9083
+
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/jpa
+    username: test
+    password: test
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      show_sql: true
+      format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+
+
